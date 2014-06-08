@@ -16,7 +16,7 @@ public class EntryListAdapter extends BaseAdapter {
 	private Context mCtx;
 	protected List<LogEntry> mEntries;
 	
-	private final int SUMMARY_LENGTH = 15;
+	private final int SUMMARY_LENGTH = 25;
 	
 	public EntryListAdapter(Context ctx, List<LogEntry> entries) {
 		mCtx = ctx;
@@ -56,6 +56,7 @@ public class EntryListAdapter extends BaseAdapter {
 		
 		String date = entry.getDate();
 		Date dateDate = entry.getDateAsDate();
+		String[] dateSplit = date.split("-");
 		String summary = sanitizeSummary(entry.getContents());
 		
 		
@@ -67,7 +68,7 @@ public class EntryListAdapter extends BaseAdapter {
 		if(dateDate == null)
 			textEntryDate.setText(date);
 		else
-			textEntryDate.setText(Html.fromHtml("<font color='#A9A9A9'>" + date + "</font>"));
+			textEntryDate.setText(Html.fromHtml("<font color='#A9A9A9'><small>" + dateSplit[0] + "</small>  " + dateSplit[1] + "</font>"));
 		textEntrySnippet.setText(summary);
 		view.setTag(date);
 		

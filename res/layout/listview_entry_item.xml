@@ -8,26 +8,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-		<TextView
-		    android:id="@+id/textEntryDate"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="2dp"
-		    android:text="@string/app_name"
-		    android:textStyle="bold" />
-		
-		<TextView
-		    android:id="@+id/textEntrySnippet"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="2dp"
-		    android:text="@string/app_name" />
+	   <TableRow
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent">
+	       
+			<TextView
+			    android:id="@+id/textEntryDate"
+			    android:textSize="24sp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="4dp"
+			   
+			    android:text="@string/app_name"
+			    />
+			
+			
+			<TextView
+			    android:id="@+id/textEntrySnippet"
+			    android:layout_gravity="top"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="8dp"
+			    android:text="@string/app_name" />
 
-    </TableRow>
+			
+	   </TableRow>
     </TableLayout>
 	
 </LinearLayout>
