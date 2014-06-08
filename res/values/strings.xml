@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dream Eater</string>
+
+    <string name="set_alarm_button">Set Alarm</string>
+    <string name="view_log_button">View Log</string>
+    <string name="title_activity_write">WriteActivity</string>
+    <string name="datetime_text">Current Date</string>
+    <string name="enabled_checkbox">Enabled</string>
+
+</resources>
