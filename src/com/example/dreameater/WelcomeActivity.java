@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +20,7 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class WelcomeActivity extends Activity implements OnItemClickListener {
+public class WelcomeActivity extends ActionBarActivity implements OnItemClickListener {
 
 	Button buttonSetAlarm;
 	ListView listViewEntries;
@@ -34,7 +35,7 @@ public class WelcomeActivity extends Activity implements OnItemClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         
-        buttonSetAlarm = (Button) findViewById(R.id.buttonSetAlarm);
+        //buttonSetAlarm = (Button) findViewById(R.id.buttonSetAlarm);
         listViewEntries = (ListView) findViewById(R.id.listViewEntries);
         checkBoxEnabled = (CheckBox) findViewById(R.id.checkBoxEnabled);
         

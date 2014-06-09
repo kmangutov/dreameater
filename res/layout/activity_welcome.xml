@@ -4,21 +4,23 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
 
-    <Button
+    <!-- <Button
         android:id="@+id/buttonSetAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:onClick="SetAlarmButtonClick"
-        android:text="@string/set_alarm_button" />
+        android:text="@string/set_alarm_button" />  -->
 
+
+ <!-- android:layout_toRightOf="@+id/buttonSetAlarm" -->
     <Button
         android:id="@+id/myButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/buttonSetAlarm"
+        android:layout_alignParentTop="true"	
+        android:layout_alignParentLeft="true"
         android:text="@string/view_log_button"
         android:onClick="NoteButtonClick" />
 
@@ -27,7 +29,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/buttonSetAlarm"
+        android:layout_below="@+id/myButton"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp" >
     </ListView>
