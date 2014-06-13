@@ -10,14 +10,17 @@ import android.support.v4.app.NotificationCompat;
 
 public class AlarmReceiver extends BroadcastReceiver {
 
+	private static final String BOOT_INTENT = "android.intent.action.BOOT_COMPLETED";
 	private static final int MORNING_NOTIFICATION = 0;
 	
 	@Override
 	public void onReceive(Context ctx, Intent intent) 
 	{
 		if(intent.getAction().equals(AlarmService.MORN_NOTIFICATION_INTENT))
-				installMorningNotification(ctx);
-		
+			installMorningNotification(ctx);
+
+		if(intent.getAction().equals(BOOT_INTENT))
+			new AlarmService(ctx).enableAlarm();
 	}
 
 	public void installMorningNotification(Context ctx)

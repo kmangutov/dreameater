@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
@@ -29,9 +31,10 @@
         <receiver android:name=".AlarmReceiver" >
             <intent-filter>
                 <action android:name="com.example.dreameater.NOTIFICATION_INTENT"></action>
+            	<action android:name="android.intent.action.BOOT_COMPLETED" ></action>
             </intent-filter>
         </receiver> 
-
+     
         <activity
             android:theme="@style/Theme.AppCompat.Light" 
             android:name="com.example.dreameater.WriteActivity"

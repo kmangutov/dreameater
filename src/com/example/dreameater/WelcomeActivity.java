@@ -64,33 +64,13 @@ public class WelcomeActivity extends ActionBarActivity implements OnItemClickLis
     	boolean checked = checkBoxEnabled.isChecked();
     	
     	if(checked)
-    		enableAlarm();
+    		mAlarmService.enableAlarm();
     	else
     		mAlarmService.cancelAlarm();
     }
     
-    public Calendar testCalendar() {
-		Calendar c = Calendar.getInstance();
-		
-		c.set(Calendar.HOUR_OF_DAY, 6);
-		c.set(Calendar.MINUTE, 0);
-		c.set(Calendar.SECOND, 0);
-		
-		Calendar now = Calendar.getInstance();
-		
-		if(now.after(c))
-			c.add(Calendar.DAY_OF_YEAR, 1);
-		
-		return c;
-    }
     
-    public void enableAlarm() {
-    	
-    	//if(alarmService.alarmExists())
-    	//	return;
-    	
-    	mAlarmService.setAlarm(testCalendar());
-    }
+    
     
     
     public void NoteButtonClick(View v) {
